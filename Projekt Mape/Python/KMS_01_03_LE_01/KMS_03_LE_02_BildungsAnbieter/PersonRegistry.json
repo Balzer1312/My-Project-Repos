@@ -1,0 +1,72 @@
+{
+    "people": [
+        {
+            "type": "Client",
+            "id": 1,
+            "name": "Bernd Wald",
+            "adress": "Musterstrasse 12",
+            "birthdate": "12.04.1992",
+            "chosenCourse": [
+                "Mathematik",
+                "Informatik"
+            ]
+        },
+        {
+            "type": "Tutor",
+            "id": 2,
+            "name": "Patrick Fuchs",
+            "adress": "Traumgasse 22",
+            "birthdate": "19.05.1985",
+            "specialty": "Informatik"
+        },
+        {
+            "type": "Tutor",
+            "id": 3,
+            "name": "Anna Beispiel",
+            "adress": "Beispielstra\u00dfe 2",
+            "birthdate": "15.03.1977",
+            "specialty": "Data Science"
+        },
+        {
+            "type": "Tutor",
+            "id": 4,
+            "name": "Rober Gader",
+            "adress": "Musterwald 12",
+            "birthdate": "30.02.1981",
+            "specialty": "Englisch"
+        },
+        {
+            "type": "Client",
+            "id": 5,
+            "name": "Oliver Bern",
+            "adress": "Waldweg 12",
+            "birthdate": "14.05.1998",
+            "chosenCourse": [
+                "Mathematik",
+                "Data Science"
+            ]
+        },
+        {
+            "type": "Client",
+            "id": 6,
+            "name": "Lisa M\u00fcller",
+            "adress": "Dorf 21",
+            "birthdate": "23.07.1987",
+            "chosenCourse": [
+                "Englisch",
+                "Mathematik"
+            ]
+        },
+        {
+            "type": "Client",
+            "id": 7,
+            "name": "Conny Meyer",
+            "adress": "Strasse 23",
+            "birthdate": "09.01.1975",
+            "chosenCourse": [
+                "Mathematik",
+                "Data Science"
+            ]
+        }
+    ]
+}

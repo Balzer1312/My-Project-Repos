@@ -1,0 +1,101 @@
+{
+    "Vehicle": {
+        "Motorrested": [
+            {
+                "type": "Car",
+                "color": "Rot",
+                "model": "Model 3",
+                "brand": "Mazda",
+                "mark": "AT121",
+                "fuel": "Benzin",
+                "consumption": 5.5,
+                "mileage": 50000,
+                "doors": 4
+            },
+            {
+                "type": "Motorcycle",
+                "color": "Schwarz",
+                "model": "Ninja-ZX-6R",
+                "brand": "Kawasaki",
+                "mark": "AT122",
+                "fuel": "Benzin",
+                "consumption": 7.1,
+                "mileage": 15000,
+                "gears": 6
+            },
+            {
+                "type": "Truck",
+                "color": "Blau",
+                "model": "Actros",
+                "brand": "Mercedes",
+                "mark": "AT123",
+                "fuel": "Diesel",
+                "consumption": 30.3,
+                "mileage": 800000,
+                "loadingWeight": 20000
+            },
+            {
+                "type": "Car",
+                "color": "Grau",
+                "model": "M3",
+                "brand": "BMW",
+                "mark": "AT124",
+                "fuel": "Benzin",
+                "consumption": 10.6,
+                "mileage": 30000,
+                "doors": 5
+            },
+            {
+                "type": "Car",
+                "color": "Wei\u00df",
+                "model": "A12",
+                "brand": "Audi",
+                "mark": "AT125",
+                "fuel": "Benzin",
+                "consumption": 8.1,
+                "mileage": 22000,
+                "doors": 5
+            },
+            {
+                "type": "Truck",
+                "color": "Grau",
+                "model": "TGX",
+                "brand": "MAN",
+                "mark": "AT126",
+                "fuel": "Benzin",
+                "consumption": 28.2,
+                "mileage": 123444,
+                "loadingWeight": 44000
+            },
+            {
+                "type": "Motorcycle",
+                "color": "Orange",
+                "model": "Duke",
+                "brand": "KTM",
+                "mark": "AT127",
+                "fuel": "Benzin",
+                "consumption": 2.3,
+                "mileage": 2341,
+                "gears": 6
+            }
+        ],
+        "NoneMotorrested": [
+            {
+                "type": "Bicycle",
+                "color": "Gr\u00fcn",
+                "model": "MountainPro",
+                "brand": "Giant",
+                "id": 1,
+                "gears": 21
+            },
+            {
+                "type": "Bicycle",
+                "color": "Gelb",
+                "model": "Roadster",
+                "brand": "Canyon",
+                "id": 2,
+                "gears": 18
+            }
+        ]
+    }
+}

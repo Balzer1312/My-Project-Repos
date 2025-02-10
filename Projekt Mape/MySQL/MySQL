@@ -1,0 +1,251 @@
+1. Datenbankoperationen
+
+Erstellt eine neue Datenbank:
+" CREATE DATABASE datenbank_name; "
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Datenbank auswählen : 
+" CREATE DATABASE datenbank_name; "
+
+ je nach verwendung auch möglich:
+" datenbank_name.table_name"
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Löscht eine Datenbank und alle darin enthaltenen Tabellen(Tables) und Daten :
+"DROP DATABASE datenbank_name;"
+
+
+<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+2. Tabellenoperationen
+
+Erstellt eine neue Tabelle(Table) in der aktuellen Datenbank:
+"CREATE TABLE tabellen_name ( spalten_name DATENTYP [OPTIONEN],...);"           
+z.B.:
+CREATE TABLE kunden (
+    kunden_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    geburtsdatum DATE
+);
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Ändert die Struktur einer bestehenden Tabelle:
+"ALTER TABLE tabellen_name ADD COLUMN neue_spalte DATENTYP;"
+z.B.:
+"ALTER TABLE kunden ADD COLUMN telefon VARCHAR(15);"
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Löscht eine Tabelle(Table) und alle darin enthaltenen Daten:
+"DROP TABLE Table_name;"
+z.B.:
+"DROP TABLE Datenbank_name.Table_name"
+
+
+<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+3. CRUD-Operationen (Create, Read, Update, Delete)
+
+Fügt Daten in eine Tabelle ein:
+"INSERT INTO tabellen_name (spalte1, spalte2, ...) VALUES (wert1, wert2, ...);"
+z.B.:
+"INSERT INTO kunden (name, email, geburtsdatum)
+VALUES ('Max Mustermann', 'max@example.com', '1990-05-20');"
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Wählt Daten aus einer Tabelle aus:
+SELECT spalte1, spalte2, ... FROM tabellen_name [WHERE bedingung]; (Der WHERE filter ist nicht verpflichtend und man kann damit mit bedingungen selektiv aus einer Datenbak filtern)
+z.B.:
+SELECT name, email FROM kunden WHERE geburtsdatum > '1990-01-01';
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Aktualisiert vorhandene Daten in einer Tabelle:
+"UPDATE tabellen_name SET spalte1 = wert1, spalte2 = wert2, ... WHERE bedingung;"
+z.B.:
+UPDATE kunden SET email = 'neue_email@example.com' 
+WHERE kunden_id = 1;
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Löscht Daten aus einer Tabelle:
+"DELETE FROM tabellen_name WHERE bedingung;"
+z.B.:
+DELETE FROM kunden WHERE kunden_id=1;
+
+
+<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+4. Datentypen
+
+BIGINT : Ganze Zahlen = 8-Byte                        SIGNED= -9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807                      UNSIGNED= 0 bis 18.446.744.073.709.551.615
+INT : Ganze Zahlen = 4-Byte                           SIGNED= -2,147,483,648 bis 2,147,483,647                                              UNSIGNED= 0 bis 4,294,967,295
+TINYINT : Ganze Zahlen = 1-Byte                       SIGNED= -128 bis 127                                                                  UNSIGNED= 0 bis 255
+
+VARCHAR(WIE VIELE ZEICHEN): Zeichen Kette (String)  Die größe kann je nach gebrauch angepasst werden  z.B.: VARCHAT(100)
+
+TEXT : Maximal 65.535 Zeichen                  Größe: Bis zu 64 KB möglich und das ist abhängig von der max_allowed_packet-Einstellung des Servers.
+MEDIUMTEXT: Maximal 16.777.215 Zeichen         Größe: 16 MB
+LONGTEXT: Maximal 4.294.967.295 Zeichen        Größe: 4 GB
+
+DATE: Datum  z. B. YYYY-MM-DD
+DATETIME: Datum und Uhrzeit z. B. YYYY-MM-DD HH:MM:SS
+
+FLOAT: Gleitkommazahlen(Dezimal) = 4-Byte              SIGNED= −3.402823466 × 10(32) bis 3.402823466 × 10(32)                                UNSIGNED= o bis 3.402823466 × 10(32)             Genauigkeit liegt bei ungefär 7 Stellen.
+DOUBLE: Gleitkommazahlen(Dezimal) = 8-Byte             SIGNED= −1.7976931348623157 × 10(308) bis 1.7976931348623157 x 10(308)                UNSIGNED= o bis 1.7976931348623157 × 10(308)     Genauigkeit liegt bei ungefär 15-16 Stellen.
+DECIMAL: Gleitkommazahlen(Dezimal)= Ist Benutzerdefiniert. Der Wertebereich wird durch Präzision (p) und Skalierung (s) festgelegt:     z.B.:  DECIMAL(10,2)   10 Stellig + 2 Komma stellen  
+
+Beispiel einsatz: 
+CREATE TABLE produkte (
+    produkt_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    preis DECIMAL(10, 2) NOT NULL,
+    beschreibung TEXT,
+    erstellt_am DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+5. Erweiterte SELECT-Befehle
+
+Verknüpft Daten aus mehreren Tabellen basierend auf einer gemeinsamen Spalte:
+SELECT spalten_name FROM tabelle1 JOIN tabelle2 ON tabelle1.spalte = tabelle2.spalte;
+z.B.:
+SELECT kunden.name, bestellungen.bestell_datum
+FROM kunden
+JOIN bestellungen ON kunden.kunden_id = bestellungen.kunden_id;
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Gruppiert die Ergebnismenge nach einer oder mehreren Spalten und wird häufig mit Aggregatfunktionen verwendet:
+SELECT spalte, AGGREGATFUNKTION(spalte) FROM tabelle GROUP BY spalte;
+z.B.:
+SELECT kunden_id, COUNT(*) AS anzahl_bestellungen
+FROM bestellungen
+GROUP BY kunden_id;
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Sortiert das Ergebnis basierend auf einer oder mehreren Spalten in aufsteigender (ASC) oder absteigender (DESC) Reihenfolge:
+SELECT spalte FROM tabelle ORDER BY spalte [ASC|DESC];
+z.B:
+SELECT name, preis
+FROM produkte
+ORDER BY preis DESC;
+
+
+<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+6. Funktionen
+
+Aggregatfunktionen:
+COUNT: Zählt die Anzahl der Zeilen
+SUM:   Summiert Werte
+AVG:   Berechnet den Durchschnitt
+MIN:   Gibt das Minimum zurück
+MAX:   Gibt das Maximum zurück
+
+z.B.:
+SELECT AVG(preis) AS durchschnittspreis
+FROM produkte;
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Stringfunktionen:
+CONCAT: Verknüpft Zeichenketten
+LOWER/UPPER: Konvertiert in Klein- bzw. Großbuchstaben
+LENGTH: Gibt die Länge einer Zeichenkette zurück
+
+z.B.:
+SELECT CONCAT(name, ' - ', email) AS kontakt_info
+FROM kunden;
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Datumsfunktionen;
+NOW: Gibt das aktuelle Datum und die aktuelle Uhrzeit zurück
+CURDATE: Gibt das aktuelle Datum zurück
+YEAR, MONTH, DAY: Extrahieren spezifische Teile eines Datums
+
+z.B.:
+SELECT name, YEAR(geburtsdatum) AS geburtsjahr
+FROM kunden;
+
+
+<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+7. Sicherheitsbefehle
+
+GRANT : Wird Verwenden, um Benutzerberechtigungen zu gewähren.
+REVOKE : Wird Verwenden, um Benutzerberechtigungen zu entziehen.
+
+(GRANT) z.B.:
+GRANT berechtigung ON datenbank_name.tabellen_name TO benutzer@host;
+oder
+GRANT SELECT, INSERT ON beispiel_datenbank.kunden TO max@localhost;
+
+(REVOKE) z.B.:
+REVOKE berechtigung ON datenbank_name.tabellen_name FROM benutzer@host;
+oder 
+REVOKE INSERT ON beispiel_datenbank.kunden FROM max@localhost;
+
+
+<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+8. Befehle für Prozeduren
+
+Erstellt eine neue Prozedur ohne Parameter:
+CREATE PROCEDURE prozedur_name
+BEGIN
+    .
+    SQL-Befehle
+    .
+END;
+CALL prozedur_name();
+
+
+z.B.:
+DELIMITER //
+CREATE PROCEDURE einfache_prozedur 
+BEGIN
+    SELECT 'Hallo, das ist eine Prozedur!';
+END //
+DELIMITER ;
+CALL einfache_prozedur();
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Prozedur mit einem Eingabeparameter:
+DELIMITER //
+CREATE PROCEDURE prozedur_name([IN|OUT|INOUT] parameter_name datentyp, ...)
+BEGIN
+    SELECT * FROM tabelle_name WHERE kunden_id = kunden_id;
+END //
+DELIMITER ;
+CALL prozedur_name(.,.)
+
+z.B.:
+DELIMITER //
+
+CREATE PROCEDURE zeige_kunde(IN kunden_id INT)
+BEGIN
+    SELECT * 
+    FROM kunden 
+    WHERE kunden_id = kunden_id;
+END //
+DELIMITER ;
+CALL zeige_kunde(1);
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Prozedur mit Eingabe- und Ausgabeparametern:
+
+DELIMITER //
+CREATE PROCEDURE berechne_summe(IN zahl1 INT, IN zahl2 INT, OUT ergebnis INT)
+BEGIN
+    SET ergebnis = zahl1 + zahl2;
+END //
+DELIMITER ;
+CALL berechne_summe(10, 20, @summe);
+SELECT @summe;
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Löscht eine gespeicherte Prozedur:
+DROP PROCEDURE procedure_name;
+
+z.B.:
+DROP PROCEDURE IF EXISTS prozedur_name;        Mit Bedingung 
+
+
+
+
+
+
+
+

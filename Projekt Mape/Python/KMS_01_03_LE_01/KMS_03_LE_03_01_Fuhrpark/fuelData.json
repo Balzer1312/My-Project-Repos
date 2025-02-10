@@ -1,0 +1,33 @@
+{
+    "refuels": {
+        "2024": {
+            "September": {
+                "Benzin": 217.5,
+                "Diesel": 246.3,
+                "Elektrisch": 0
+            },
+            "Oktober": {
+                "Benzin": 202.0,
+                "Diesel": 260.8,
+                "Elektrisch": 0
+            },
+            "November": {
+                "Benzin": 202.7,
+                "Diesel": 230.0,
+                "Elektrisch": 0
+            },
+            "Dezember": {
+                "Benzin": 190.0,
+                "Diesel": 220.0,
+                "Elektrisch": 0
+            }
+        },
+        "2025": {
+            "Januar": {
+                "Benzin": 224.0,
+                "Diesel": 144.0,
+                "Elektrisch": 0
+            }
+        }
+    }
+}

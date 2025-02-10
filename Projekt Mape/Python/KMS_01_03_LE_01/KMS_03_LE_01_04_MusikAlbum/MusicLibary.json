@@ -1,0 +1,48 @@
+[
+    {
+        "albumTitle": "Hybrid Theory",
+        "artist": "Linkin Park",
+        "tracks": [
+            {
+                "title": "Papercut",
+                "length": "03:05"
+            },
+            {
+                "title": "Crawling",
+                "length": "03:29"
+            },
+            {
+                "title": "In the End",
+                "length": "03:36"
+            }
+        ]
+    },
+    {
+        "albumTitle": "Minutes to Midnight",
+        "artist": "Linkin Park",
+        "tracks": [
+            {
+                "title": "Leave Out All the Rest",
+                "length": "03:29"
+            },
+            {
+                "title": "Shadow of the Day",
+                "length": "04:50"
+            }
+        ]
+    },
+    {
+        "albumTitle": "The Hunting Party",
+        "artist": "Linkin Park",
+        "tracks": [
+            {
+                "title": "War",
+                "length": "02:12"
+            },
+            {
+                "title": "Rebellion",
+                "length": "03:45"
+            }
+        ]
+    }
+]

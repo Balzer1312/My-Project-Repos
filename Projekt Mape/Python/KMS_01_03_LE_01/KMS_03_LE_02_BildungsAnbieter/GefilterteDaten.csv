@@ -1,0 +1,5 @@
+type,id,name,adress,birthdate,chosenCourse
+Client,1,Bernd Wald,Musterstrasse 12,12.04.1992,"['Mathematik', 'Informatik']"
+Client,5,Oliver Bern,Waldweg 12,14.05.1998,"['Mathematik', 'Data Science']"
+Client,6,Lisa Müller,Dorf 21,23.07.1987,"['Englisch', 'Mathematik']"
+Client,7,Conny Meyer,Strasse 23,09.01.1975,"['Mathematik', 'Data Science']"

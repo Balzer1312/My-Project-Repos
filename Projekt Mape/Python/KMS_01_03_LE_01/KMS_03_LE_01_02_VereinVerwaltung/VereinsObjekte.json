@@ -1,0 +1,60 @@
+[
+    {
+        "class": "Chairperson",
+        "attributes": {
+            "memberID": 1,
+            "name": "Robert Winkler",
+            "email": "Robert@Winkler.com",
+            "entryDate": "12.08.1990",
+            "administrationBody": "CEO",
+            "currentProject": "Projekt A"
+        }
+    },
+    {
+        "class": "Player",
+        "attributes": {
+            "memberID": 2,
+            "name": "Marcel Sabizer",
+            "email": "Marcel@Sabizer.com",
+            "entryDate": "05.04.2022",
+            "teamName": "Team A",
+            "playPosition": "Stürmer",
+            "playerNumber": 9
+        }
+    },
+    {
+        "class": "Treasurer",
+        "attributes": {
+            "memberID": 3,
+            "name": "Rene Benko",
+            "email": "Rene@Benko.com",
+            "entryDate": "14.05.1999",
+            "administrationBody": "Finazen",
+            "financeArea": "Budget"
+        }
+    },
+    {
+        "class": "SportTeamManagerr",
+        "attributes": {
+            "memberID": 4,
+            "name": "Max Muster",
+            "email": "Max@Muster.com",
+            "entryDate": "04.05.2011",
+            "administrationBody": "Team Manager",
+            "event": "Fußball Event"
+        }
+    },
+    {
+        "class": "Coach",
+        "attributes": {
+            "memberID": 5,
+            "name": "Ralf Rangnick",
+            "email": "Ralf@Rangnick.com",
+            "entryDate": "16.02.2020",
+            "teamName": "Team A",
+            "experience": 10,
+            "mantra": "Unsere Stärken stärken, das ist das Motto",
+            "trainingsDate": "20.07.2024"
+        }
+    }
+]

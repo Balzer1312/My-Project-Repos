@@ -1,0 +1,8 @@
+memberID,name,adress,email,entryDate,administrationBody,responsibilities,financeArea,group
+1,Max Mustermann,Musterstraße 1,max@mail.com,03.02.1995,Chairperson,Leitung,,
+2,Rene Benko,Musterstraße 2,Benko@betrug.com,04.08.2005,Treasurer,,Budgetverwaltung,
+3,Hans Kordl,kordlheim,hans@mail.de,18.07.2014,Manager,,,A
+6,Laura Klein,Ringstraße 12,laura@mail.com,12.03.2001,,,,A
+32,Peter Schmidt,Hauptstraße 45,peter@mail.com,04.11.2010,,,,A
+123,Mario Muster,Mustergasse 12,mario@mail.com,13.05.2024,,,,A
+5,Oliver Pucher,Musterweg 17,oliver@mail.com,11.05.2024,,,,A

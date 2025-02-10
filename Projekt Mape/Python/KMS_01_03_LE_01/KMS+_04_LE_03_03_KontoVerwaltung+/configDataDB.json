@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "password": "-Balzer4327-",
+    "database": "bankdata",
+    "port": 3306
+}

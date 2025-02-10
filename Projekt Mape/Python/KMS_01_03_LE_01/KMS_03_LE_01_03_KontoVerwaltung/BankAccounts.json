@@ -1,0 +1,12 @@
+{
+    "AT1234567890": {
+        "Name": "Daniel Ostmann",
+        "IBAN": "AT1234567890",
+        "Kontostand": 5123.32
+    },
+    "AT9876543210": {
+        "Name": "Anna Müller",
+        "IBAN": "AT9876543210",
+        "Kontostand": 4329.21
+    }
+}

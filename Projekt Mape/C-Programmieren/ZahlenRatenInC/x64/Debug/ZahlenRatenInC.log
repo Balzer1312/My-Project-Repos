@@ -1,0 +1,4 @@
+﻿  C-ZahlenRaten.c
+C:\Users\052435\source\repos\Zahlenrate_Spiel\ZahlenRatenInC\C-ZahlenRaten.c(34,9): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\052435\source\repos\Zahlenrate_Spiel\ZahlenRatenInC\C-ZahlenRaten.c(68,13): warning C4098: 'Game': 'void' function returning a value
+  ZahlenRatenInC.vcxproj -> C:\Users\052435\source\repos\Zahlenrate_Spiel\x64\Debug\ZahlenRatenInC.exe

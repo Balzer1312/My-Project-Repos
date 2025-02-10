@@ -1,0 +1,6 @@
+type,id,name,adress,birthdate,chosenCourse,specialty
+Client,1,Bernd Wald,Musterstrasse 12,12.04.1992,"['Mathematik', 'Informatik']"
+Tutor,2,Patrick Fuchs,Traumgasse 22,19.05.1985,Informatik
+Tutor,3,Anna Beispiel,Beispielstraße 2,15.03.1977,Data Science
+Tutor,4,Rober Gader,Musterwald 12,30.02.1981,Englisch
+Client,5,Oliver Bern,Waldweg 12,14.05.1998,"['Mathematik', 'Data Science']"

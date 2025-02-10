@@ -1,0 +1,14 @@
+[
+    {
+        "courseID": 101,
+        "courseName": "Mathematik"
+    },
+    {
+        "courseID": 102,
+        "courseName": "Physik"
+    },
+    {
+        "courseID": 103,
+        "courseName": "Informatik"
+    }
+]
